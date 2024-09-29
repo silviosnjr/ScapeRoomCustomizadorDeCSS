@@ -53,7 +53,8 @@ const codigoFonte = {
         "height": "100%"
     },
     "#container":{
-        "display": "flex"
+        "display": "flex",
+        "flex-wrap": "wrap"
     },
     ".cartao":{
         "margin": "1rem 1rem",
@@ -72,8 +73,7 @@ const codigoFonte = {
         "font-size": "1vw"
     },
     ".cartao__conteudo p": {
-        "margin-top": "1rem",
-        "padding": "2rem"
+        "padding": "4rem"
     },
     ".cartao__conteudo__pergunta p":{
         "color": "var(--text-color)",

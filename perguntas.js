@@ -1,7 +1,10 @@
+const textoErro = "<img src='assets/img/browser_sad.png' style='width:200px; margin-bottom:20px'> <br/>Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+
 const perguntas = [
     {
-        enunciado: "Vamos customizar a página web abaixo ?",
+        enunciado: "Vamos criar uma parte do estilo CSS da nossa página de FlashCards e customizar a página web abaixo ?",
         imagem: "assets/img/pagina_HTML.png",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "",
@@ -38,6 +41,7 @@ const perguntas = [
     {
         enunciado: "Nossa página terá uma imagem de plano de fundo.<br>Qual imagem abaixo você gostaria de ter como fundo?",
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "body",
@@ -94,9 +98,10 @@ const perguntas = [
         <li> atribuir um valor com dois pontos : </li>
         <li> inserir o valor que é um arquivo por isso utilizamos a url</li>
         </ol> -->
-        Porém qual é essa propriedade que inseri imagem a um plano de fundo da nossa página ?
+        Porém qual será essa propriedade que inseri imagem a um plano de fundo da nossa página ?
         `,
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "body",
@@ -140,11 +145,12 @@ const perguntas = [
         ],
         mostraBlocoCSS: false,
         blocoCSS: "body",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
         enunciado: "A fonte ou estilo das letras de nosso página é algo marcante. Por isso busquei do GoogleFonts algumas opções, escolha qual você gostou mais?",
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "body",
@@ -245,6 +251,7 @@ const perguntas = [
     {
         enunciado: "Vamos colorir nossa página web. Escolha uma das cores abaixo para ser a cor da frente do seu cartão?",
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "body",
@@ -332,6 +339,7 @@ const perguntas = [
     {
         enunciado: "Escolha agora uma das cores abaixo para ser a cor de tráz do seu cartão?",
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "body",
@@ -419,6 +427,7 @@ const perguntas = [
     {
         enunciado: "Agora escolha a cor do texto?",
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "body",
@@ -527,11 +536,13 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: "body",
-        textoErrado: ""
+        textoErrado: "",
+        imgRecompensa: "",
     },
     {
-        enunciado: `Vamos estilizar o elemento com classe "cartao__conteudo". Primeiro vamos inserir uma cor de fundo, utilizando da variável que criamos chamada --card-front-color. Quais das opções abaixo aplica cor de fundo utilizando nossa variável ?`,
-        imagem: "",
+        enunciado: `Vamos estilizar o elemento com classe "cartao__conteudo". Primeiro inserimos uma cor de fundo, utilizando da variável que criamos chamada --card-front-color. Quais das opções abaixo aplica cor de fundo utilizando nossa variável ?`,
+        imagem: "assets/img/background_cartao.png",
+        posicaoImg: "top", 
         alternativas: [
             {
                 blocoCSS: "",
@@ -575,11 +586,12 @@ const perguntas = [
         ],
         mostraBlocoCSS: false,
         blocoCSS: ".cartao__conteudo",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
         enunciado: `Qual propriedade CSS e valor abaixo você considera que deixará o texto do cartão centralizado ?`,
-        imagem: "",
+        imagem: "assets/img/texto_centralizado_cartao.png",
+        posicaoImg: "top", 
         alternativas: [
             {
                 blocoCSS: "",
@@ -621,13 +633,14 @@ const perguntas = [
                 textoRecompensa: ``
             },
         ],
-        mostraBlocoCSS: false,
+        mostraBlocoCSS: true,
         blocoCSS: ".cartao__conteudo",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
-    {
+    /*{
         enunciado: `Ainda no elemento com classe "cartao__conteudo" vamos inserir a seguinte declaração de estilo "height: 100%;". Qual seria o motivo da utilização de mais esta linha de estilo neste elemento?`,
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "",
@@ -671,17 +684,31 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: ".cartao__conteudo",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
-    },
+        textoErrado: textoErro
+    },*/
     {
-        enunciado: `Aqui vai uma pergunta do container (display flex)?`,
-        imagem: "",
+        enunciado: `Você está organizando os cartões da sua página, como mostrado na imagem. Antes, eles apareciam empilhados, um embaixo do outro. Agora, eles estão organizados lado a lado. Qual valor da propriedade display permite esse comportamento?`,
+        imagem: "assets/img/display_flex_cartao.png",
+        posicaoImg: "", 
         alternativas: [
             {
                 blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                propriedadeCSS : "display",
+                valorPropriedadeCSS: "block",
+                texto: "block",
+                afirmacao: ``,
+                correta: false,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: "#container",
+                propriedadeCSS : "display",
+                valorPropriedadeCSS: "inline",
+                texto: "inline",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -694,22 +721,9 @@ const perguntas = [
                 blocoCSS: "#container",
                 propriedadeCSS : "display",
                 valorPropriedadeCSS: "flex",
-                texto: "Certo",
+                texto: "flex",
                 afirmacao: ``,
                 correta: true,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-            {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
-                afirmacao: ``,
-                correta: false,
                 img: "",
                 imgThumb: "",
                 recompensa: false,
@@ -719,17 +733,18 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: "#container",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
-        enunciado: `Aqui vai uma pergunta do .cartao?`,
-        imagem: "",
+        enunciado: `A propriedade flex-basis, quando aplicada a um elemento filho de um contêiner com display: flex, define sua largura inicial. Queremos que uma linha do layout tenha três cartões, ou seja, cada cartão deve ocupar 1/3 do contêiner. No entanto, cada cartão possui uma margem de 1rem à direita e à esquerda. Qual das opções abaixo representa o cálculo correto para definir a largura desses cartões?`,
+        imagem: "assets/img/flex-basis.png",
+        posicaoImg: "top", 
         alternativas: [
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: ".cartao",
+                propriedadeCSS : "flex-basis",
+                valorPropriedadeCSS: "math(1/3 - 6rem)",
+                texto: "math(1/3 - 6rem)",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -740,11 +755,11 @@ const perguntas = [
             },
             {
                 blocoCSS: ".cartao",
-                propriedadeCSS : "margin",
-                valorPropriedadeCSS: "1rem 1rem",
-                texto: "Certo",
+                propriedadeCSS : "flex-basis",
+                valorPropriedadeCSS: "calc(33% - 3rem)",
+                texto: "calc(33% - 3rem)",
                 afirmacao: ``,
-                correta: true,
+                correta: false,
                 img: "",
                 imgThumb: "",
                 recompensa: false,
@@ -752,12 +767,12 @@ const perguntas = [
                 textoRecompensa: ``
             },
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: ".cartao",
+                propriedadeCSS : "flex-basis",
+                valorPropriedadeCSS: "calc(33% - 6rem)",
+                texto: "calc(33% - 6rem)",
                 afirmacao: ``,
-                correta: false,
+                correta: true,
                 img: "",
                 imgThumb: "",
                 recompensa: false,
@@ -767,30 +782,18 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: ".cartao",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
-        enunciado: `Aqui vai uma pergunta do .cartao__conteudo h3?`,
-        imagem: "",
+        enunciado: `Queremos que os parágrafos dentro do cartão tenham um espaçamento interno, para que os textos fiquem afastados, representando uma divisão clara dentro do conteúdo. Qual propriedade utilizamos para aplicar esse espaçamento interno?`,
+        imagem: "assets/img/espacamento_interno.png",
+        posicaoImg: "top", 
         alternativas: [
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
-                afirmacao: ``,
-                correta: false,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-            {
-                blocoCSS: ".cartao__conteudo h3",
-                propriedadeCSS : "color",
-                valorPropriedadeCSS: "var(--text-color)",
-                texto: "Certo",
+                blocoCSS: ".cartao__conteudo p",
+                propriedadeCSS : "padding",
+                valorPropriedadeCSS: "4rem",
+                texto: "padding",
                 afirmacao: ``,
                 correta: true,
                 img: "",
@@ -800,32 +803,10 @@ const perguntas = [
                 textoRecompensa: ``
             },
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
-                afirmacao: ``,
-                correta: false,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-        ],
-        mostraBlocoCSS: true,
-        blocoCSS: ".cartao__conteudo h3",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
-    },
-    {
-        enunciado: `Aqui vai uma pergunta do .cartao__conteudo p?`,
-        imagem: "",
-        alternativas: [
-            {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: ".cartao__conteudo p",
+                propriedadeCSS : "border",
+                valorPropriedadeCSS: "4rem",
+                texto: "border",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -836,22 +817,9 @@ const perguntas = [
             },
             {
                 blocoCSS: ".cartao__conteudo p",
-                propriedadeCSS : "margin-top",
-                valorPropriedadeCSS: "1rem",
-                texto: "Certo",
-                afirmacao: ``,
-                correta: true,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-            {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                propriedadeCSS : "margin",
+                valorPropriedadeCSS: "4rem",
+                texto: "margin",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -863,17 +831,67 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: ".cartao__conteudo p",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
-        enunciado: `Aqui vai uma pergunta do .cartao__conteudo__pergunta p?`,
-        imagem: "",
+        enunciado: `Precisamos posicionar o subtítulo "programação" no canto superior esquerdo de cada cartão, sem que ele afete a disposição ou o fluxo dos outros elementos dentro do cartão. Qual propriedade e valor abaixo resultaria nesse comportamento?`,
+        imagem: "assets/img/position_absolute.png",
+        posicaoImg: "", 
         alternativas: [
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: ".cartao__conteudo h3",
+                propriedadeCSS : "position",
+                valorPropriedadeCSS: "relative",
+                texto: "position: relative;",
+                afirmacao: ``,
+                correta: false,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: ".cartao__conteudo h3",
+                propriedadeCSS : "position",
+                valorPropriedadeCSS: "fixed",
+                texto: "position: fixed;",
+                afirmacao: ``,
+                correta: false,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: ".cartao__conteudo h3",
+                propriedadeCSS : "position",
+                valorPropriedadeCSS: "absolute",
+                texto: "position: absolute;",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+        ],
+        mostraBlocoCSS: true,
+        blocoCSS: ".cartao__conteudo h3",
+        textoErrado: textoErro
+    },
+    {
+        enunciado: `Para personalizar a aparência de uma página, é comum alterarmos a cor do texto. Qual é a propriedade CSS responsável por definir a cor do conteúdo textual de um elemento?`,
+        imagem: "assets/img/cor_do_texto.png",
+        posicaoImg: "", 
+        alternativas: [
+            {
+                blocoCSS: ".cartao__conteudo__pergunta p",
+                propriedadeCSS : "background-color",
+                valorPropriedadeCSS: "var(--text-color)",
+                texto: "background-color",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -884,9 +902,9 @@ const perguntas = [
             },
             {
                 blocoCSS: ".cartao__conteudo__pergunta p",
-                propriedadeCSS : "font-weight",
-                valorPropriedadeCSS: "500",
-                texto: "Certo",
+                propriedadeCSS : "color",
+                valorPropriedadeCSS: "var(--text-color)",
+                texto: "color",
                 afirmacao: ``,
                 correta: true,
                 img: "",
@@ -896,10 +914,10 @@ const perguntas = [
                 textoRecompensa: ``
             },
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: ".cartao__conteudo__pergunta p",
+                propriedadeCSS : "font-style",
+                valorPropriedadeCSS: "var(--text-color)",
+                texto: "font-style",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -911,17 +929,31 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: ".cartao__conteudo__pergunta p",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
-        enunciado: `Aqui vai uma pergunta do .cartao__conteudo__resposta p?`,
-        imagem: "",
+        enunciado: `Para destacar títulos ou dar ênfase a certos textos, podemos controlar a espessura da fonte. Qual propriedade CSS é utilizada para ajustar o peso (espessura) de um texto, como torná-lo mais "negrito" ou mais "leve"?`,
+        imagem: "assets/img/font-weight.png",
+        posicaoImg: "", 
         alternativas: [
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: ".cartao__conteudo__resposta p",
+                propriedadeCSS : "font-style",
+                valorPropriedadeCSS: "700",
+                texto: "font-style",
+                afirmacao: ``,
+                correta: false,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: ".cartao__conteudo__resposta p",
+                propriedadeCSS : "text-transform",
+                valorPropriedadeCSS: "700",
+                texto: "text-transform",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -934,22 +966,9 @@ const perguntas = [
                 blocoCSS: ".cartao__conteudo__resposta p",
                 propriedadeCSS : "font-weight",
                 valorPropriedadeCSS: "700",
-                texto: "Certo",
+                texto: "font-weight",
                 afirmacao: ``,
                 correta: true,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-            {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
-                afirmacao: ``,
-                correta: false,
                 img: "",
                 imgThumb: "",
                 recompensa: false,
@@ -959,17 +978,31 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: ".cartao__conteudo__resposta p",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
-        enunciado: `Aqui vai uma pergunta do footer?`,
+        enunciado: `No nosso HTML, temos o elemento &lt;footer&gt;Projeto desenvolvido nos Formadores em Ação&lt;/footer&gt;, que é responsável por representar o conteúdo do rodapé. Sabemos que ele é um elemento único na página. Como você selecionaria esse elemento no CSS?`,
         imagem: "",
+        posicaoImg: "", 
         alternativas: [
             {
-                blocoCSS: "",
+                blocoCSS: "footer",
                 propriedadeCSS : "",
                 valorPropriedadeCSS: "",
-                texto: "Errado",
+                texto: "Como ele é único, posso selecioná-lo diretamente pelo nome do elemento footer.",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: "footer",
+                propriedadeCSS : "",
+                valorPropriedadeCSS: "",
+                texto: "Devo obrigatoriamente criar uma classe e utilizá-la como seletor.",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -980,22 +1013,9 @@ const perguntas = [
             },
             {
                 blocoCSS: "footer",
-                propriedadeCSS : "position",
-                valorPropriedadeCSS: "fixed",
-                texto: "Certo",
-                afirmacao: ``,
-                correta: true,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-            {
-                blocoCSS: "",
                 propriedadeCSS : "",
                 valorPropriedadeCSS: "",
-                texto: "Errado",
+                texto: "Devo obrigatoriamente criar um ID e utilizá-lo como seletor.",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -1007,17 +1027,31 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: "footer",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
     {
-        enunciado: `Aqui vai uma pergunta do footer p?`,
-        imagem: "",
+        enunciado: `O texto do parágrafo contido em nosso rodapé está grande e deve ser mais discreto e menor. Qual das propriedades abaixo permitirá diminuir esse texto?`,
+        imagem: "assets/img/font-size.png",
+        posicaoImg: "top", 
         alternativas: [
             {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                blocoCSS: "footer p",
+                propriedadeCSS : "font-size",
+                valorPropriedadeCSS: "0.6rem",
+                texto: "font-size",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: "footer p",
+                propriedadeCSS : "font-style",
+                valorPropriedadeCSS: "0.6rem",
+                texto: "font-style",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -1028,22 +1062,9 @@ const perguntas = [
             },
             {
                 blocoCSS: "footer p",
-                propriedadeCSS : "margin-top",
-                valorPropriedadeCSS: "0.5rem",
-                texto: "Certo",
-                afirmacao: ``,
-                correta: true,
-                img: "",
-                imgThumb: "",
-                recompensa: false,
-                linguagem: "",
-                textoRecompensa: ``
-            },
-            {
-                blocoCSS: "",
-                propriedadeCSS : "",
-                valorPropriedadeCSS: "",
-                texto: "Errado",
+                propriedadeCSS : "font-family",
+                valorPropriedadeCSS: "0.6rem",
+                texto: "font-family",
                 afirmacao: ``,
                 correta: false,
                 img: "",
@@ -1055,6 +1076,6 @@ const perguntas = [
         ],
         mostraBlocoCSS: true,
         blocoCSS: "footer p",
-        textoErrado: "Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+        textoErrado: textoErro
     },
 ];
