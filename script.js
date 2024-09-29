@@ -112,7 +112,7 @@ function respostaSelecionada(opcaoSelecionada, recompensa){
     if(perguntaAtual.mostraBlocoCSS == true){        
         const titulo = document.createElement("div");
         titulo.classList.add("titulo");
-        titulo.innerHTML = "<img src='assets/img/recompensa.png' style='height:100px;' ><br/>Recompensa desbloqueada. Copie o código CSS abaixo e cole no seu arquivo style.css";
+        titulo.innerHTML = "<img src='assets/img/recompensa.png' style='height:100px;' ><br/><span class='destaque'>Recompensa desbloqueada!</span> <span class='destaque'>Copie</span> o código CSS abaixo e <span class='destaque'>cole</span> no seu arquivo <span class='code'>style.css</span>";
         caixaPerguntas.textContent = "";
         caixaPerguntas.appendChild(titulo);
         
@@ -151,8 +151,8 @@ function mostraResultado(){
 
     const texto = document.createElement("div");
     texto.classList.add("titulo");
-    texto.innerHTML = `<img src='assets/img/pagina_final.gif' style='width:450px'><br />Se você coletou todas as suas recompensas e as inseriu em seu arquivo style.css, você agora escapou desta página com uma parte do código de estilo CSS para construir seu projeto de FlashCards.
-    <br /> <br /> Agora, abra seu index.html no navegador para visualizar a interpretação do seu trabalho e compartilhe essa experiência com seus colegas de turma! `
+    texto.innerHTML = `<img src='assets/img/pagina_final.gif' style='width:450px'><br />Se você coletou todas as suas recompensas e as inseriu em seu arquivo <span class='code'>style.css</span>, você agora escapou desta página com uma parte do código de estilo CSS para construir seu projeto de FlashCards.
+    <br /> <br /> Agora, abra seu <span class='code'>index.html</span> no navegador para visualizar a interpretação do seu trabalho e compartilhe essa experiência com seus colegas de turma! `
     caixaPerguntas.appendChild(texto);
 }
 
