@@ -1,8 +1,8 @@
-const textoErro = "<img src='assets/img/browser_sad.png' style='width:200px; margin-bottom:20px'> <br/>Você escolheu a opção errada, mas tudo bem, volte e tente novamente!"
+const textoErro = "<img src='assets/img/browser_sad.png' style='width:200px; margin-bottom:20px'> <br/>Você escolheu a opção errada, mas tudo bem, <span class='destaque'>volte e tente novamente!</span>"
 
 const perguntas = [
     {
-        enunciado: "Vamos criar uma parte do estilo CSS da nossa página de FlashCards e customizar a página web abaixo ?",
+        enunciado: "Vamos criar uma parte do <span class='destaque'>estilo CSS</span> da nossa página de FlashCards e customizar a página web abaixo ?",
         imagem: "assets/img/pagina_HTML.png",
         posicaoImg: "", 
         alternativas: [
@@ -25,7 +25,7 @@ const perguntas = [
                 propriedadeCSS : "",
                 valorPropriedadeCSS: "",
                 texto: "Sim, vamos! Porém eu NÃO tenho o código HTML em meu projeto.",
-                afirmacao: "Tudo bem, copie o código abaixo e insira dentro do seu arquivo index.html",
+                afirmacao: "Tudo bem, <span class='destaque'>copie</span> o código abaixo e <span class='destaque'>insira dentro</span> do seu arquivo <span class='code'>index.html</span>",
                 correta: true,
                 img: "",
                 imgThumb: "",
@@ -39,7 +39,7 @@ const perguntas = [
         textoErrado: ""
     },
     {
-        enunciado: "Nossa página terá uma imagem de plano de fundo.<br>Qual imagem abaixo você gostaria de ter como fundo?",
+        enunciado: "Nossa página terá uma imagem de plano de fundo.<br><span class='destaque'>Qual imagem abaixo você gostaria de ter como fundo?</span>",
         imagem: "",
         posicaoImg: "", 
         alternativas: [
@@ -54,7 +54,7 @@ const perguntas = [
                 imgThumb: "assets/img/bg-desktop-blue-thumb.jpg",
                 recompensa: true,
                 linguagem: false,
-                textoRecompensa: `<p>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto. Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-blue.webp' download>link</a> </b> e depois coloque-o na pasta <b>assets/img</b>.</p>`
+                textoRecompensa: `<p><span class='destaque'>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto.<br /></span> Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-blue.webp' download>link</a> </b> e depois coloque-o na pasta <span class='code'>assets/img<span>.</p>`
             },
             {
                 blocoCSS: "body",
@@ -67,7 +67,7 @@ const perguntas = [
                 imgThumb: "assets/img/bg-desktop-red-thumb.jpg",
                 recompensa: true,
                 linguagem: "",
-                textoRecompensa: `<p>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto. Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-red.webp' download>link</a> </b> e depois coloque-o na pasta <b>assets/img</b>.</p>`
+                textoRecompensa: `<p><span class='destaque'>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto.<br /></span> Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-red.webp' download>link</a> </b> e depois coloque-o na pasta <span class='code'>assets/img<span>.</p>`
             },
             {
                 blocoCSS: "body",
@@ -80,7 +80,20 @@ const perguntas = [
                 imgThumb: "assets/img/bg-desktop-yellow-thumb.jpg",
                 recompensa: true,
                 linguagem: "",
-                textoRecompensa: `<p>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto. Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-yellow.webp' download>link</a> </b> e depois coloque-o na pasta <b>assets/img</b>.</p>`
+                textoRecompensa: `<p><span class='destaque'>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto.<br /></span> Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-yellow.webp' download>link</a> </b> e depois coloque-o na pasta <span class='code'>assets/img<span>.</p>`
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "background",
+                valorPropriedadeCSS: "url(img/bg-desktop-green.webp)",
+                texto: "<span>Tons em verde</span>",
+                afirmacao: `<span class='destaque'>Boa escolha!</span><br /> <img src='assets/img/bg-desktop-green_thumb.jpg'>`,
+                correta: true,
+                img: "assets/img/bg-desktop-green.webp",
+                imgThumb: "assets/img/bg-desktop-green_thumb.jpg",
+                recompensa: true,
+                linguagem: "",
+                textoRecompensa: `<p><span class='destaque'>ATENÇÃO: A imagem que escolheu precisa ser salva no seu projeto.<br /></span> Baixe o arquivo clicando neste <b> <a href='assets/img/bg-desktop-green.webp' download>link</a> </b> e depois coloque-o na pasta <span class='code'>assets/img<span>.</p>`
             }
         ],
         mostraBlocoCSS: false,
@@ -88,8 +101,8 @@ const perguntas = [
         textoErrado: ""
     },
     {
-        enunciado: `Precisamos colocar a imagem que escolheu como fundo no elemento body. 
-        Para fazer isso, iremos inserir códigos no arquivo style.css, seguindo a seguinte sintaxe: <br>
+        enunciado: `Precisamos colocar a imagem que escolheu como <span class='destaque'>fundo no elemento</span> <span class='code'>&lt;body&gt;</span>. 
+        Para fazer isso, iremos inserir códigos no arquivo <span class='code'>style.css</span>, seguindo a seguinte sintaxe: <br>
         <img src='assets/img/pergunta-background.png'><br/>
         <!-- <ol>
         <li> selecionar o body</li>
@@ -98,7 +111,7 @@ const perguntas = [
         <li> atribuir um valor com dois pontos : </li>
         <li> inserir o valor que é um arquivo por isso utilizamos a url</li>
         </ol> -->
-        Porém qual será essa propriedade que inseri imagem a um plano de fundo da nossa página ?
+        <span class='destaque'>Porém qual será essa propriedade que inseri imagem a um plano de fundo da nossa página ?</span>
         `,
         imagem: "",
         posicaoImg: "", 
@@ -148,7 +161,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: "A fonte ou estilo das letras de nosso página é algo marcante. Por isso busquei do GoogleFonts algumas opções, escolha qual você gostou mais?",
+        enunciado: "A fonte ou estilo das letras de nossa página é algo marcante. Por isso busquei do GoogleFonts algumas opções, <span class='destaque'>escolha qual você gostou mais?</span>",
         imagem: "",
         posicaoImg: "", 
         alternativas: [
@@ -249,7 +262,7 @@ const perguntas = [
         textoErrado: ""
     },
     {
-        enunciado: "Vamos colorir nossa página web. Escolha uma das cores abaixo para ser a cor da frente do seu cartão?",
+        enunciado: "Vamos colorir nossa página web. <span class='destaque'>Escolha uma das cores</span> abaixo para ser a cor da <span class='destaque'>frente do seu cartão?</span>",
         imagem: "",
         posicaoImg: "", 
         alternativas: [
@@ -330,6 +343,32 @@ const perguntas = [
                 recompensa: false,
                 linguagem: "",
                 textoRecompensa: ``
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "--card-front-color",
+                valorPropriedadeCSS: "#15AE68",
+                texto: "<div id='verde' class='espacamento-cores'>Verde</div>",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "--card-front-color",
+                valorPropriedadeCSS: "#09683d",
+                texto: "<div id='verde-escuro' class='espacamento-cores'>Verde escuro</div>",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
             }
         ],
         mostraBlocoCSS: false,
@@ -337,7 +376,7 @@ const perguntas = [
         textoErrado: ""
     },
     {
-        enunciado: "Escolha agora uma das cores abaixo para ser a cor de tráz do seu cartão?",
+        enunciado: "<span class='destaque'>Escolha agora uma das cores</span> abaixo para ser a <span class='destaque'>cor de tráz do seu cartão</span>?",
         imagem: "",
         posicaoImg: "", 
         alternativas: [
@@ -418,6 +457,32 @@ const perguntas = [
                 recompensa: false,
                 linguagem: "",
                 textoRecompensa: ``
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "--card-back-color",
+                valorPropriedadeCSS: "#15AE68",
+                texto: "<div id='verde' class='espacamento-cores'>Verde</div>",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "--card-back-color",
+                valorPropriedadeCSS: "#09683d",
+                texto: "<div id='verde-escuro' class='espacamento-cores'>Verde escuro</div>",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
             }
         ],
         mostraBlocoCSS: false,
@@ -425,7 +490,7 @@ const perguntas = [
         textoErrado: ""
     },
     {
-        enunciado: "Agora escolha a cor do texto?",
+        enunciado: "Agora escolha a <span class='destaque'>cor do texto</span>?",
         imagem: "",
         posicaoImg: "", 
         alternativas: [
@@ -532,6 +597,32 @@ const perguntas = [
                 recompensa: false,
                 linguagem: "",
                 textoRecompensa: ``
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "--text-color",
+                valorPropriedadeCSS: "#15AE68",
+                texto: "<div id='texto-verde' class='espacamento-cores'>Verde</div>",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
+            },
+            {
+                blocoCSS: "body",
+                propriedadeCSS : "--text-color",
+                valorPropriedadeCSS: "#09683d",
+                texto: "<div id='texto-verde-escuro' class='espacamento-cores'>Verde escuro</div>",
+                afirmacao: ``,
+                correta: true,
+                img: "",
+                imgThumb: "",
+                recompensa: false,
+                linguagem: "",
+                textoRecompensa: ``
             }
         ],
         mostraBlocoCSS: true,
@@ -540,7 +631,7 @@ const perguntas = [
         imgRecompensa: "",
     },
     {
-        enunciado: `Vamos estilizar o elemento com classe "cartao__conteudo". Primeiro inserimos uma cor de fundo, utilizando da variável que criamos chamada --card-front-color. Quais das opções abaixo aplica cor de fundo utilizando nossa variável ?`,
+        enunciado: `Vamos estilizar o elemento com classe <span class='code'>cartao__conteudo</span>. Primeiro inserimos uma cor de fundo, utilizando da variável que criamos chamada <span class='code'>--card-front-color</span>. Quais das opções abaixo <span class='destaque'>aplica cor de fundo utilizando nossa variável </span>?`,
         imagem: "assets/img/background_cartao.png",
         posicaoImg: "top", 
         alternativas: [
@@ -589,7 +680,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `Qual propriedade CSS e valor abaixo você considera que deixará o texto do cartão centralizado ?`,
+        enunciado: `Qual propriedade CSS e valor abaixo você considera que deixará o <span class='destaque'>texto do cartão centralizado</span> ?`,
         imagem: "assets/img/texto_centralizado_cartao.png",
         posicaoImg: "top", 
         alternativas: [
@@ -687,7 +778,7 @@ const perguntas = [
         textoErrado: textoErro
     },*/
     {
-        enunciado: `Você está organizando os cartões da sua página, como mostrado na imagem. Antes, eles apareciam empilhados, um embaixo do outro. Agora, eles estão organizados lado a lado. Qual valor da propriedade display permite esse comportamento?`,
+        enunciado: `Você está organizando os cartões da sua página, como mostrado na imagem. Antes, eles apareciam empilhados, um embaixo do outro. Agora, eles estão organizados lado a lado. <span class='destaque'>Qual valor da propriedade display permite esse comportamento?</span>`,
         imagem: "assets/img/display_flex_cartao.png",
         posicaoImg: "", 
         alternativas: [
@@ -736,7 +827,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `A propriedade flex-basis, quando aplicada a um elemento filho de um contêiner com display: flex, define sua largura inicial. Queremos que uma linha do layout tenha três cartões, ou seja, cada cartão deve ocupar 1/3 do contêiner. No entanto, cada cartão possui uma margem de 1rem à direita e à esquerda. Qual das opções abaixo representa o cálculo correto para definir a largura desses cartões?`,
+        enunciado: `A propriedade <span class='code'>flex-basis</span>, quando aplicada a um elemento filho de um contêiner com <span class='code'>display: flex;</span>, define sua largura inicial. Queremos que uma linha do layout tenha três cartões, ou seja, cada cartão deve ocupar 1/3 do contêiner. No entanto, cada cartão possui uma margem de <span class='code'>1rem</span>à direita e à esquerda. <span class='destaque'>Qual das opções abaixo representa o cálculo correto para definir a largura desses cartões?</span>`,
         imagem: "assets/img/flex-basis.png",
         posicaoImg: "top", 
         alternativas: [
@@ -785,7 +876,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `Queremos que os parágrafos dentro do cartão tenham um espaçamento interno, para que os textos fiquem afastados, representando uma divisão clara dentro do conteúdo. Qual propriedade utilizamos para aplicar esse espaçamento interno?`,
+        enunciado: `Queremos que os parágrafos dentro do cartão tenham um espaçamento interno, para que os textos fiquem afastados, representando uma divisão clara dentro do conteúdo.<span class='destaque'>Qual propriedade utilizamos para aplicar esse espaçamento interno?</span>`,
         imagem: "assets/img/espacamento_interno.png",
         posicaoImg: "top", 
         alternativas: [
@@ -834,7 +925,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `Precisamos posicionar o subtítulo "programação" no canto superior esquerdo de cada cartão, sem que ele afete a disposição ou o fluxo dos outros elementos dentro do cartão. Qual propriedade e valor abaixo resultaria nesse comportamento?`,
+        enunciado: `Precisamos <span class='destaque'>posicionar o subtítulo "programação" no canto superior esquerdo de cada cartão</span>, sem que ele afete a disposição ou o fluxo dos outros elementos dentro do cartão. Qual propriedade e valor abaixo resultaria nesse comportamento?`,
         imagem: "assets/img/position_absolute.png",
         posicaoImg: "", 
         alternativas: [
@@ -883,7 +974,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `Para personalizar a aparência de uma página, é comum alterarmos a cor do texto. Qual é a propriedade CSS responsável por definir a cor do conteúdo textual de um elemento?`,
+        enunciado: `Para personalizar a aparência de uma página, é comum alterarmos a cor do texto. <span class='destaque'>Qual é a propriedade CSS responsável por definir a cor do conteúdo textual de um elemento?</span>`,
         imagem: "assets/img/cor_do_texto.png",
         posicaoImg: "", 
         alternativas: [
@@ -932,7 +1023,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `Para destacar títulos ou dar ênfase a certos textos, podemos controlar a espessura da fonte. Qual propriedade CSS é utilizada para ajustar o peso (espessura) de um texto, como torná-lo mais "negrito" ou mais "leve"?`,
+        enunciado: `Para destacar títulos ou dar ênfase a certos textos, podemos controlar a espessura da fonte. <span class='destaque'>Qual propriedade CSS é utilizada para ajustar o peso (espessura) de um texto, como torná-lo mais "negrito" ou mais "leve"?</span>`,
         imagem: "assets/img/font-weight.png",
         posicaoImg: "", 
         alternativas: [
@@ -981,7 +1072,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `No nosso HTML, temos o elemento &lt;footer&gt;Projeto desenvolvido nos Formadores em Ação&lt;/footer&gt;, que é responsável por representar o conteúdo do rodapé. Sabemos que ele é um elemento único na página. Como você selecionaria esse elemento no CSS?`,
+        enunciado: `No nosso HTML, temos o elemento <span class='code'>&lt;footer&gt;Projeto desenvolvido nos Formadores em Ação&lt;/footer&gt;</span>, que é responsável por representar o conteúdo do rodapé. Sabemos que ele é um elemento único na página. Como você selecionaria esse elemento no CSS?`,
         imagem: "",
         posicaoImg: "", 
         alternativas: [
@@ -1030,7 +1121,7 @@ const perguntas = [
         textoErrado: textoErro
     },
     {
-        enunciado: `O texto do parágrafo contido em nosso rodapé está grande e deve ser mais discreto e menor. Qual das propriedades abaixo permitirá diminuir esse texto?`,
+        enunciado: `O texto do parágrafo contido em nosso rodapé está grande e deve ser mais discreto e menor. <span class='destaque'>Qual das propriedades abaixo permitirá diminuir esse texto?</span>`,
         imagem: "assets/img/font-size.png",
         posicaoImg: "top", 
         alternativas: [
